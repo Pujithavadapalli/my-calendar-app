@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+.calendar {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #007bff;
+  color: white;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+}
+
+.days,
+.row {
+  display: flex;
+}
+
+.cell {
+  border: 1px solid #e0e0e0;
+  min-height: 100px;
+  padding: 8px;
+  position: relative;
+  cursor: pointer;
+  background: white;
+}
+
+.cell.disabled {
+  background: #fafafa;
+  color: #ccc;
+  cursor: default;
+}
+
+.cell.selected {
+  background: #cce5ff;
+}
+
+.number {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.events {
+  max-height: 70px;
+  overflow-y: auto;
+}
+
+.event {
+  background: #007bff;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 320px;
+  max-width: 90%;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: #6c757d;
+}
+
+.delete-btn {
+  background: #dc3545;
+}
+
+.weekly-days {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0 10px 0;
+}
+
+.weekly-days label {
+  font-weight: normal;
+  font-size: 12px;
+}
